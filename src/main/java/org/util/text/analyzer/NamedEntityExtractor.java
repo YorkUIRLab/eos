@@ -1,12 +1,10 @@
 package org.util.text.analyzer;
 
 import edu.stanford.nlp.ie.AbstractSequenceClassifier;
-import edu.stanford.nlp.ie.crf.*;
+import edu.stanford.nlp.ie.crf.CRFClassifier;
 import edu.stanford.nlp.io.IOUtils;
-import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.ling.CoreAnnotations;
-import edu.stanford.nlp.sequences.DocumentReaderAndWriter;
-import edu.stanford.nlp.util.Triple;
+import edu.stanford.nlp.ling.CoreLabel;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -19,7 +17,6 @@ import java.util.List;
 public class NamedEntityExtractor {
 
     public static final String LIB_STANFORD_7_CLASSES = "lib/stanford-ner-2015-12-09/classifiers/english.muc.7class.distsim.crf.ser.gz";
-
     AbstractSequenceClassifier<CoreLabel> classifier = null;
     public NamedEntityExtractor() {
 
