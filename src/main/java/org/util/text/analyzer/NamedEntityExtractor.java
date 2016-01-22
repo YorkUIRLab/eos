@@ -18,10 +18,12 @@ import java.util.List;
  */
 public class NamedEntityExtractor {
 
+    public static final String LIB_STANFORD_7_CLASSES = "lib/stanford-ner-2015-12-09/classifiers/english.muc.7class.distsim.crf.ser.gz";
+
     AbstractSequenceClassifier<CoreLabel> classifier = null;
     public NamedEntityExtractor() {
 
-        String serializedClassifier = "lib/stanford-ner-2015-12-09/classifiers/english.muc.7class.distsim.crf.ser.gz";
+        String serializedClassifier = LIB_STANFORD_7_CLASSES;
         try {
             this.classifier = CRFClassifier.getClassifier(serializedClassifier);
         } catch (IOException e) {

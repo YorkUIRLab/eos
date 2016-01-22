@@ -12,6 +12,7 @@ import org.xml.sax.helpers.DefaultHandler;
 public class EOSParser extends DefaultHandler {
 
     NamedEntityExtractor namedEntityExtractor ;
+
     public EOSParser() {
         super();
         namedEntityExtractor = new NamedEntityExtractor();
@@ -75,27 +76,27 @@ public class EOSParser extends DefaultHandler {
     public void characters(char ch[], int start, int length) throws SAXException {
 
         if (captureDateTime) {
-            System.out.println(new String(ch, start, length));
+           // System.out.println(new String(ch, start, length));
             captureDateTime = false;
         }
 
         if (publicationDateTime) {
-            System.out.println(new String(ch, start, length));
+          //  System.out.println(new String(ch, start, length));
             publicationDateTime = false;
         }
 
         if (url) {
-            System.out.println(new String(ch, start, length));
+          //  System.out.println(new String(ch, start, length));
             url = false;
         }
         if (language) {
-            System.out.println(new String(ch, start, length));
+          //  System.out.println(new String(ch, start, length));
             language = false;
         }
 
         if (text) {
-            System.out.println(new String(ch, start, length));
-           // namedEntityExtractor.extractNamedEntities(new String(ch, start, length));
+          //  System.out.println(new String(ch, start, length));
+          // namedEntityExtractor.extractNamedEntities(new String(ch, start, length));
             text = false;
         }
 

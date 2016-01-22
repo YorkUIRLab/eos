@@ -27,7 +27,8 @@ public class EOSWorker {
 
         XMLReader.readXML(fileList);
 
-       // NamedEntityExtractor namedEntityExtractor = new NamedEntityExtractor();
+        // reading files directly.
+        // NamedEntityExtractor namedEntityExtractor = new NamedEntityExtractor();
         //namedEntityExtractor.extractNamedEntities(fileList);
 
 
